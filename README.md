@@ -1,5 +1,8 @@
 # Gcalc
-A little project to show a simulate a calculator.
+A little project to simulate a calculator.
+[![Maintainability](https://api.codeclimate.com/v1/badges/da7fdc93b494c7ed98fd/maintainability)](https://codeclimate.com/github/giordanofalves/gcalc/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/da7fdc93b494c7ed98fd/test_coverage)](https://codeclimate.com/github/giordanofalves/gcalc/test_coverage)
+[![Build Status](https://travis-ci.org/giordanofalves/gcalc.svg?branch=master)](https://travis-ci.org/giordanofalves/gcalc)
 
 * Ruby version: 2.4.0
 * Rails version: 5.2.1
@@ -12,7 +15,12 @@ My goals are:
 
 * A beautiful code
 * Min 95% code covered by specs
-* Use great tools like Travis CI, Code Climate and SimpleCov
+* Use great tools like:
+    * Travis CI;
+    * Code Climate;
+    * SimpleCov;
+    * Rubocop;
+    * Bullet;
 * A good layout(my weakness)
 * Publish this project in heroku server
 * Calculator page(using ActionCable)
