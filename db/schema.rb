@@ -16,9 +16,11 @@ ActiveRecord::Schema.define(version: 2018_11_05_215558) do
   enable_extension "plpgsql"
 
   create_table "calculations", force: :cascade do |t|
-    t.integer "operation"
-    t.json "values"
+    t.integer "first_value"
+    t.integer "second_value"
     t.float "result"
+    t.integer "operation"
+    t.integer "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
