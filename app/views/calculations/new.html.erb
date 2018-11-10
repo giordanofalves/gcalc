@@ -1,6 +1,6 @@
 <%= simple_form_for @calculation, url: api_v1_calculations_path, remote: true do |f| %>
-  <%= f.input :first_value, input_html: { min: 0, max: 100 } %>
-  <%= f.input :second_value, input_html: { min: 0, max: 100 } %>
+  <%= f.input :first_value %>
+  <%= f.input :second_value %>
 
   <%= f.button :submit, :sum %>
   <%= f.button :submit, :difference %>

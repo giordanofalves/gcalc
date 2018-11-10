@@ -5,18 +5,18 @@ FactoryBot.define do
   end
 
   trait :sum do
-    operation { :op_sum }
+    operation { :sum }
   end
 
   trait :difference do
-    operation { :op_difference }
+    operation { :difference }
   end
 
   trait :multiplication do
-    operation { :op_multiplication }
+    operation { :multiplication }
   end
 
   trait :division do
-    operation { :op_division }
+    operation { :division }
   end
 end
