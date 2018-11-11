@@ -6,15 +6,22 @@ module Api
       def create
         @calculation = Calculation.find_or_create_by(calculation_params)
         @calculation.increment!(:count)
-        render json: @calculation, status: :ok
+
+        if @calculation.valid?
+          render 'calculations/show.json'
+        else
+          render json: { errors: @calculation.errors }, status: :unprocessable_entity
+        end
       end
 
       private
 
       def set_operation
         params['calculation'].merge!(
-          operation: Calculation.operations["op_#{params[:commit]}"]
+          operation: Calculation.operations[params[:commit]]
         )
+      rescue StandardError
+        render json: { errors: 'Error, invalid data provided.' }, status: :unprocessable_entity
       end
 
       def calculation_params
