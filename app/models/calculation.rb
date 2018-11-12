@@ -25,14 +25,14 @@ class Calculation < ApplicationRecord
 
   def operation_description
     case operation
-      when 'sum'
-        "#{first_value} + #{second_value}"
-      when 'difference'
-        "#{first_value} - #{second_value}"
-      when 'multiplication'
-        "#{first_value} * #{second_value}"
-      when 'division'
-        "#{first_value} / #{second_value}"
-      end
+    when 'sum'
+      "#{first_value} + #{second_value}"
+    when 'difference'
+      "#{first_value} - #{second_value}"
+    when 'multiplication'
+      "#{first_value} * #{second_value}"
+    when 'division'
+      "#{first_value} / #{second_value}"
+    end
   end
 end
