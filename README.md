@@ -9,7 +9,7 @@ A little project to simulate a calculator.
 
 ## Synopsis
 I created this project to a job test.
-You can access this project here: [add link](add link)
+You can access this project here: [https://g-calc.herokuapp.com/](https://g-calc.herokuapp.com/)
 
 My goals are:
 
@@ -36,11 +36,9 @@ My goals are:
 
 ```console
 git clone https://github.com/giordanofalves/gcalc.git
-cp config/credentials.yml.example config/credentials.yml.enc (nedd to check if will use credentials to it)
+cp config/database.yml.travis config/database.yml (need to change database credentials here)
 bundle install
 ```
-Update your database credentials in credentials.yml.enc.
-
 
 ## Test suite
 ```console
