@@ -1,11 +1,27 @@
-<%= simple_form_for @calculation, url: api_v1_calculations_path, remote: true do |f| %>
-  <%= f.input :first_value %>
-  <%= f.input :second_value %>
+<%= simple_form_for @calculation,
+                    url: api_v1_calculations_path,
+                    remote: true do |f| %>
+  <div class='form-row'>
+    <div class='form-group col-3'></div>
+    <div class='form-group col-3'>
+      <%= f.input :first_value, label: false, placeholder: 'First value...', input_html: { class: 'form-control' } %>
+    </div>
+    <div class='form-group col-3'>
+      <%= f.input :second_value, label: false, placeholder: 'Second value...', input_html: { class: 'form-control' } %>
+    </div>
+  </div>
 
-  <%= f.button :submit, :sum %>
-  <%= f.button :submit, :difference %>
-  <%= f.button :submit, :multiplication %>
-  <%= f.button :submit, :division %>
+   <div class='form-row disabled'>
+    <div class='form-group col-4'></div>
+    <div class='form-group col-4'>
+      <%= f.input :result, label: false, disabled: true, placeholder: 'Result', input_html: { class: 'form-control' } %>
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <%= f.button :submit, :sum, class: 'btn btn-primary' %>
+    <%= f.button :submit, :difference, class: 'btn btn-secondary' %>
+    <%= f.button :submit, :multiplication, class: 'btn btn-info' %>
+    <%= f.button :submit, :division, class: 'btn btn-warning' %>
+  </div>
 <% end %>
-
-<div class='result'></div>
